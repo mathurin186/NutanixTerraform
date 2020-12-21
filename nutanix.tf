@@ -54,6 +54,6 @@ resource "nutanix_virtual_machine" "MyTestVM_TF" {
 }  
   
 output "ip_address" {
-  value = nutanix_virtual_machine.MyTestVM_TF.nic_list_status.0.ip_endpoint_list[0]["ip"]
+  value = nutanix_virtual_machine.MyTestVM-TF.nic_list_status.0.ip_endpoint_list[0]["ip"]
 }
 
