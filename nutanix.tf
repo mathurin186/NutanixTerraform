@@ -11,7 +11,7 @@ resource "nutanix_virtual_machine" "MyTestVM_TF" {
  name = "MyTestVM-TF"
  description = "Created with Terraform"
  provider = nutanix
- cluster_uuid = "0005ae5b-547e-4129-0000-0000000076a8"
+ cluster_uuid = "0305ae5b-s47e-41v9-0000-1237000076a8"
   num_vcpus_per_socket = 1
   num_sockets = 1
   memory_size_mib = 2048
@@ -28,7 +28,7 @@ resource "nutanix_virtual_machine" "MyTestVM_TF" {
   # ssh into the CVM and run: acli image.list
   data_source_reference = {
    kind = "image"
-   uuid = "1c88dd88-b9be-4961-9fd6-5c581d6e6d75"
+   uuid = "1c8cdd38-b9ce-4c61-9fd6-5c5a1d6e6dc5"
     }
 
   device_properties {
@@ -46,7 +46,7 @@ resource "nutanix_virtual_machine" "MyTestVM_TF" {
     storage_config {
       storage_container_reference {
         kind = "storage_container"
-        uuid = "04c64ac7-c695-4350-b77d-61d5285c8fb0"
+        uuid = "04c62ac7-cc5-435a-b77d-61d52b5c8fb0"
     }
    } 
   
