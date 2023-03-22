@@ -14,3 +14,8 @@ variable "endpoint" {
 variable "user" {
   type = string
 }
+
+variable "port" {
+  type = number
+  
+}
