@@ -11,14 +11,14 @@ resource "nutanix_virtual_machine" "MyTestVM_TF" {
  name = "MyTestVM-TF"
  description = "Created with Terraform"
  provider = nutanix
- cluster_uuid = "0305ae5b-s47e-41v9-0000-1237000076a8"
+ cluster_uuid = "some_string"
   num_vcpus_per_socket = 1
   num_sockets = 1
   memory_size_mib = 2048
   
   nic_list {
      # subnet_reference is saying, which VLAN/network do you want to attach here?
-     subnet_uuid = "e6d59992-3323-4e39-8364-9a0603597c50"
+     subnet_uuid = "some_subnet"
    }
 
   disk_list {
@@ -28,7 +28,7 @@ resource "nutanix_virtual_machine" "MyTestVM_TF" {
   # ssh into the CVM and run: acli image.list
   data_source_reference = {
    kind = "image"
-   uuid = "1c8cdd38-b9ce-4c61-9fd6-5c5a1d6e6dc5"
+   uuid = "some_string"
     }
 
   device_properties {
@@ -46,7 +46,7 @@ resource "nutanix_virtual_machine" "MyTestVM_TF" {
     storage_config {
       storage_container_reference {
         kind = "storage_container"
-        uuid = "04c62ac7-cc5-435a-b77d-61d52b5c8fb0"
+        uuid = "some_string"
     }
    } 
   
